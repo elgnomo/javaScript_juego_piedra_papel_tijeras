@@ -7,7 +7,16 @@ const PSCORE = document.getElementById('score');
 
 const BUTTONS = document.querySelectorAll('button');
 const CHOICES = ['piedra', 'papel', 'tijeras'];
+const FILENAMES = {
+    'piedra': 'assets/rock.png',
+    'papel': 'assets/paper.png',
+    'tijeras': 'assets/scissors.png',
+};
+
 console.log("BUTTONS :", BUTTONS);
+
+let positiveScore = 0;
+let negativeScore = 0;
 
 BUTTONS.forEach(
     button => button.addEventListener('click', starGame)
@@ -30,13 +39,27 @@ function starGame(event) {
     console.log(`El ganador es ${WINNER}`);
 
     //mostrar resultados
-    if (WINNER == 'player') {
+    IMGPLAYERCHOICE.setAttribute('src', FILENAMES[
+        PLAYERCHOICE]);
 
-    } else if (WINNER == 'computer') {
+    IMGCOMPUTERCHOICE.setAttribute('src', FILENAMES[
+        COMPUTERCHOICE]);
 
-    } else {
-
+    let resultado;
+    if (WINNER === 'player') {
+        resultado = 'ganas';
+        ++positiveScore; // positiveScore = positiveScore +1;
+        // positiveScore += 1;
+    } else if (WINNER === 'computer') {
+        resultado = 'pierdes';
+        ++negativeScore;
+    } else { // empate
+        resultado = 'empatas';
     }
+
+    PRESULT.innerHTML = `Tú ${resultado} escogiendo <strong> ${PLAYERCHOICE} </strong> en contra de <strong> ${COMPUTERCHOICE} </strong>.`;
+
+    PSCORE.innerHTML = `Has ganado ${positiveScore} veces. Has perdido ${negativeScore} veces.`;
 }
 //forEach argumento una funcion
 
