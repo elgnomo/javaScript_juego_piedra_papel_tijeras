@@ -17,12 +17,12 @@
 	<section id="game-zone">
 		<figure>
 			<figcaption>Jugador</figcaption>
-			<img src="assets/rock.png" alt="Elección del jugador">
+			<img id="playerChoice" src="assets/rock.png" alt="Elección del jugador">
 		</figure>
 
 		<figure>
 			<figcaption>Computadora</figcaption>
-			<img src="assets/rock.png" alt="Elección del computador">
+			<img id="computerChoice" src="assets/rock.png" alt="Elección del computador">
 		</figure>
 	</section>
 	<p id="result">
@@ -36,13 +36,13 @@
 
 	<section>
 		<p>Escoge una opción:</p>
-		<button>
+		<button data-choice="piedra">
 			<img src="assets/rock.png" alt="Jugar usando piedra">
 		</button>
-		<button>
+		<button data-choice="papel">
 			<img src="assets/paper.png" alt="Jugar usando papel">
 		</button>
-		<button>
+		<button data-choice="tijeras">
 			<img src="assets/scissors.png" alt="Jugar usando tijeras">
 		</button>
 	</section>

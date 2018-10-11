@@ -5,11 +5,28 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+/*
+	body {
+		text-align: center; centrar todo el contenido se centre
+		background: #ffc;
+		font-size: 1.2em;
+		font-family: 'Open Sans', sans-serif;
+	}
+*/
+
 #game-zone {
 	background: rgba(240, 0, 50, 0.75);
 	display: flex;
 	color: white;
 }
+
+/* 
+	#game-zone {
+	background: rgba(240, 0, 50, 0.75);//fondo color
+	display: flex;//centre
+	color: white;//color texto
+	} 
+*/
 
 #game-zone figure {
 	flex: 1;
@@ -27,3 +44,11 @@ body {
 	border: 1px dashed black;
 	background: rgba(0, 215, 0, 0.55);
 }
+
+/*
+	#score {
+		padding: 1em;
+		border: 1px dashed black;
+		background: rgba(0, 215, 0, 0.55); //opacidad
+	}
+*/
